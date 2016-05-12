@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Struts2Diagram version="2.0">
+  <package name="default" location="241,31" size="207,521">
+    <action name="login" location="27,54" size="150,62">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="login.jsp" />
+      </result>
+      <result name="input">
+        <resourceEdge source="input" routing="0" target="login.jsp" />
+      </result>
+    </action>
+    <action name="selectUpdata" location="33,257" size="150,62">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="index.jsp" />
+      </result>
+      <result name="input">
+        <resourceEdge source="input" routing="0" target="index.jsp" />
+      </result>
+    </action>
+    <action name="register" location="16,146" size="150,83">
+      <result name="input">
+        <resourceEdge source="input" routing="0" target="register.jsp" />
+      </result>
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="register.jsp" />
+      </result>
+      <result name="failure">
+        <resourceEdge source="failure" routing="0" target="failure.jsp" />
+      </result>
+    </action>
+    <action name="addupdata" location="22,372" size="150,83">
+      <result name="input">
+        <resourceEdge source="input" routing="0" target="updata.jsp" />
+      </result>
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="updata.jsp" />
+      </result>
+      <result name="failure">
+        <resourceEdge source="failure" routing="0" target="failure.jsp" />
+      </result>
+    </action>
+    <action name="getImage" location="22,472" size="150,40" />
+  </package>
+  <webResource name="success.jsp" path="success.jsp" location="18,107" size="150,55" />
+  <webResource name="failure.jsp" path="failure.jsp" location="486,87" size="150,55" />
+  <webResource name="index.jsp" path="index.jsp" location="20,237" size="150,55" />
+  <webResource name="register.jsp" path="register.jsp" location="516,291" size="150,55" />
+  <webResource name="login.jsp" path="login.jsp" location="57,350" size="150,55" />
+  <webResource name="updata.jsp" path="updata.jsp" location="37,437" size="150,55" />
+</Struts2Diagram>
+
