@@ -40,6 +40,35 @@ public class UpdataDao {
 			DBConn.CloseConn();
 		}
 	}
+	
+	public List selectUpdataBytype(int type){
+		try{
+			List list=new ArrayList();
+			conn=DBConn.getConn();
+			PreparedStatement pstmt=conn.prepareStatement("select * from updatawhere type = "+type);
+			ResultSet rs=pstmt.executeQuery();
+			while(rs.next()){
+				Updata updata=new Updata();
+				updata.setUpid(rs.getInt(1));
+				updata.setUsername(rs.getString(2));
+				updata.setTitle(rs.getString(3));
+				updata.setPrice(rs.getFloat(4));
+				updata.setDescribe(rs.getString(5));
+				updata.setType(rs.getInt(6));
+				updata.setUpphoto(rs.getString(7));
+				updata.setPhone(rs.getString(8));
+				updata.setQqnum(rs.getString(9));
+				updata.setUpname(rs.getString(10));
+				list.add(updata);
+			}
+			return list;
+		}catch(Exception e){
+			e.printStackTrace();
+			return null;
+		}finally{
+			DBConn.CloseConn();
+		}
+	}
 	//查询总记录条数的方法
 	public int selectUpdataSize(){
 		try{

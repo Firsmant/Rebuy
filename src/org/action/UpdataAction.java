@@ -24,6 +24,7 @@ public class UpdataAction extends ActionSupport{
 	private int pageSize=4;
 	private Updata updata;
 	private String message;
+	private int type;
 	UpdataDao updataDao=new UpdataDao();
 	
 	//图片有关
@@ -43,7 +44,15 @@ public class UpdataAction extends ActionSupport{
 		request.put("page", page);
 		return SUCCESS;
 	}
+	public String selectUpdataBytype() throws Exception{
+		List list=updataDao.selectUpdataBytype(this.type);
+		Map request=(Map)ActionContext.getContext().get("request");
+		request.put("list", list);
+		return SUCCESS;
+		
+	}
 	public String addallUpdata() throws Exception{
+		this.setMessage("添加成功");
 		Updata u=new Updata();
 		u.setUsername(updata.getUsername());
 		u.setTitle(updata.getTitle());
@@ -109,9 +118,15 @@ public class UpdataAction extends ActionSupport{
 	public void setUpdata(Updata updata) {
 		this.updata = updata;
 	}
+	public int getType(){
+		return type;
+	}
+	public void setType(int type){
+		this.type=type;
+	}
 	
 
-	public String getMessage() {
+	public String getMessage(){
 		return message;
 	}
 	public void setMessage(String message) {

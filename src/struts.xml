@@ -11,6 +11,10 @@
 			<result name="success">index.jsp</result>
 			<result name="input">index.jsp</result>
 		</action>
+		<action name="selectUpdataBytype" class="org.action.UpdataAction" method="selectUpdataBytype">
+			<result name="success">index.jsp</result>
+			<result name="input">index.jsp</result>
+		</action>		
 		<action name="register" class="org.action.RegisterAction">
 			<result name="input">register.jsp</result>
 			<result name="success">register.jsp</result>

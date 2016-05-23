@@ -5,6 +5,7 @@
 		<title>Register Page</title>
 	</head>
 	<body style="text-align: center">
+	  			<s:iterator value="#setMessage" id="message">message</s:iterator>
 		<h2 align="center">上传</h2>
 		<s:form method="post" action="addupdata"  cssStyle="width: 350" theme="simple" enctype="multipart/form-data" validate="true">
 			用户名：<s:textfield key="updata.username"  label="用 户 名" cssStyle="width:160" /><br>
